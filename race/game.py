@@ -3,6 +3,7 @@ from enum import Enum
 import curses
 import random
 import time
+#import logging
 
 class GameState(Enum):
     START = 1
@@ -19,6 +20,7 @@ class RacingGame:
         self.speed = 1  # Initial speed
     
     def start_game(self):
+
         if self.state == GameState.START:
             self.state = GameState.RACING
             print("Game has started. Use left/right arrows to move.")
